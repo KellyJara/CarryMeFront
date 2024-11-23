@@ -7,15 +7,15 @@
  
 <div class="container">
     <div class="text-center">
-    <button class="btn btn-primary">Ajouter une photo</button>
+    <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter une photo</button>
     </div>
     <div class="row row-cols-2 row-cols-lg-3">
             <div class="col p-3 text-white image-card">
                     <img src="../images/packtosend.jpg" class="rounded w-100"/>
                     <p class="titre-image">Titre</p>
                     <div class="action-image-buttons">
-                        <button type="button" class="btn btn-outline-light" ><i class="bi bi-pencil-square"></i></button>
-                        <button type="button" class="btn btn-outline-light" ><i class="bi bi-trash"></i></button>
+                        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
+                        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
                     </div>
             </div>
             <div class="col p-3 text-white image-card">
@@ -29,4 +29,55 @@
     </div>
 </div>
 
+<!-- Modal edition -->
+<div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="EditionPhotoModalLabel">Edition Photo</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                   <!-- <div class="mb-3">
+               <label for="NamePhotoInput" class="form-label">Titre</label>
+                  <input type="text" class="form-control" id="NamePhotoInput" placeholder="Lasagnes à la bolognese" name="Titre">
+                </div>-->
+                <div class="mb-3">
+                  <label for="ImageInput" class="form-label">Image</label>
+                  <input type="file" class="form-control" id="ImageInput"  name="Image">
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary"> Post</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal deleting -->
+<div class="modal fade" id="DeletePhotoModal" tabindex="-1" aria-labelledby="DeletePhotoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="DeletePhotoModalLabel">Are you sure you want to delete this photo?</h2>        
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                    <p class="text-center">Titre</p>
+                    <img src="../images/packtosend.jpg" class="rounded w-100"/>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-danger"> Delete</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"> Close</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
