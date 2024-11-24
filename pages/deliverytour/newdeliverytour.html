@@ -1,0 +1,68 @@
+
+<div class="hero-scene text-center text-white">
+        <div class="hero-scene-content">
+            <h1>Ma réservation</h1>
+        </div>
+    </div>
+    
+    <div class="container">
+        <form>
+            <div class="mb-3">
+                <label for="OriginInput" class="form-label">Origin</label>
+                <input disabled type="text" class="form-control" id="OriginInput" placeholder="city of origin" value="Rome" name="Origin" > 
+            </div>
+            <div class="mb-3">
+                <label for="DestinationInput" class="form-label">Destination</label>
+                <input disabled type="text" class="form-control" id="DestinationInput" placeholder="City of destination" value="Paris" name="Destination"> 
+            </div>
+            <div class="mb-3">
+              <label for="MeansOfTransportInput" class="form-label">Mean of Transport</label>
+              <input type="text" class="form-control" id="MeansOfTransportInput" placeholder="placeholder"  value="plane, bus, car" name="Mean of Transport"> 
+            </div>
+            <div class="mb-3">
+                <label for="MeansOfTransportInput" class="form-label">Mean of Transport</label>
+                <input type="text" class="form-control" id="MeansOfTransportInput" placeholder="placeholder"  value="plane, bus, car" name="Mean of Transport"> 
+              </div>
+              <div class="mb-3">
+                <label for="DepartureDateInput" class="form-label">Departure Date</label>
+                <input type="date" class="form-control" id="DepartureDateInput" name="DepartureDate"> 
+              </div>
+              <div class="mb-3">
+                <label for="ArrivalDateInput" class="form-label">Arrival Date</label>
+                <input type="date" class="form-control" id="ArrivalDateInput" name="ArrivalDate"> 
+              </div>
+
+              <div class="mb-3">
+                <label for="DescriptionInput" class="form-label">Description</label>
+                <input disabled type="text" class="form-control" id="DescriptionInput" placeholder="space available, items allowed" value="I can transport some documents from Italy to Paris" name="Description" > 
+            </div>
+            
+            
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" >Post</button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DeleteDeliveryModal">Delete</button>
+            </div>
+        </form>
+    </div>
+
+
+     <!-- Modal deleting -->
+<div class="modal fade" id="DeleteDeliveryModal" tabindex="-1" aria-labelledby="DeleteDeliveryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="DeletePhotoModalLabel">Are you sure you want to delete this deliverytour?</h2>        
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="text-center">
+                    <button type="button" class="btn btn-danger"> Delete</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"> Close</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>

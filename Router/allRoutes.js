@@ -12,6 +12,8 @@ export const allRoutes = [
     new Route("/carriereditinfo","Carrier's edit info","/pages/carrierauth/carriereditinfo.html"),
     new Route("/usereditinfo","User's edit info","/pages/userauth/usereditinfo.html"),
     new Route("/photos","Photos","/pages/photos.html"),
+    new Route("/deliverytours","My Delivery Tour","/pages/deliverytour/deliverytour.html"),
+    new Route("/newdeliverytour","New Delivery Tour","/pages/deliverytour/newdeliverytour.html"),
    ];
     
 
