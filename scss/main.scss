@@ -1,5 +1,6 @@
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
-@import 'custom';
+@import '_custom';
+@use 'custom';
 
 body {
   margin: 0; /* Elimina el margen predeterminado del body */
@@ -115,32 +116,40 @@ header {
         transition: all 0.3s;
     }
 
-    .action-image-buttons{
-      opacity: 1;
-    }
- 
     .titre-image{
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        transition: all 0.3s;
-    }
-
-    .action-image-buttons{
       position: absolute;
-      top: 15px;
-      left: 15px;
-      width: 92%;
-      padding: 10px;
-      display: flex;
-      align-content: stretch;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 0.3s;
   }
+  }
+  .image-card{
+    position:relative;
+    &:hover{
+        .titre-image,
+        .action-image-button{
+            opacity: 1;
+        }
+    }
+.action-image-button{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 92%;
+  padding: 10px;
+  display: flex;
+  align-content: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+    }
 }
+
+
+
+
 
 
 

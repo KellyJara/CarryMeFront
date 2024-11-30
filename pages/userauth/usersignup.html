@@ -6,33 +6,65 @@
   <div class="container mt-4">
       <form>
           <div class="mb-3">
-              <label for="NomInput" class="form-label">Nom</label>
-              <input type="text" class="form-control" id="NomInput" placeholder="Votre nom" name="Nom"> 
-          </div>
+              <label for="Lastname" class="form-label">Lastname</label>
+              <input type="text" class="form-control" id="LastnameInput" placeholder="your last name" name="Lastname"> 
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                This field is required
+              </div>
+            </div>
+          
           <div class="mb-3">
-              <label for="PrenomInput" class="form-label">Prénom</label>
-              <input type="text" class="form-control" id="PrenomInput" placeholder="Votre prénom" name="Prenom"> 
+              <label for="NameInput" class="form-label">Name</label>
+              <input type="text" class="form-control" id="NameInput" placeholder="Votre prénom" name="Prenom"> 
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                This field is required
+              </div>
           </div>
           <div class="mb-3">
             <label for="EmailInput" class="form-label">Email</label>
             <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.fr" name="Email"> 
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              This field is required
+            </div>
           </div>
           <div class="mb-3">
-            <label for="PasswordInput" class="form-label">Mot de passe</label>
+            <label for="PasswordInput" class="form-label">Password</label>
             <input type="password" class="form-control" id="PasswordInput" name="Password">
+            <div class="invalid-feedback">
+              Requirements: min 8 characters; 1 number, 1 special character, 1 capital letter, 1 low case letter.
+            </div>
+            <div class="valid-feedback">
+            The password is secure
+            </div>
           </div>
           <div class="mb-3">
               <label for="ValidatePasswordInput" class="form-label">Validez votre mot de passe</label>
               <input type="password" class="form-control" id="ValidatePasswordInput" name="PasswordConfirm">
-            </div>
+              <div class="invalid-feedback">
+                The passwords do not match
+              </div>
+              <div class="valid-feedback">
+               Looks good!
+              </div>
+          </div>
+            <div class="invalid-feedback">
+              the password does not match
+         </div>
           <div class="text-center">
-              <button type="submit" class="btn btn-primary">Inscription</button>
+              <button type="submit" class="btn btn-primary" id="btn-validation-inscription">Inscription</button>
           </div>
           <div class="text-center pt-3">
-            <a href="/signin">Vous avez déjà un compte ? Connectez-vous ici !</a>
+            <a href="/usersignin">Do you have an account? Login here!</a>
         </div>
       </form>
-      <div class="text-center pt-3">
-          <a href="/usersignin">Vous avez déjà un compte ? Connectez-vous ici !</a>
-      </div>
+      
   </div>

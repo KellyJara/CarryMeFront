@@ -12,6 +12,7 @@ $font-family-serif: "Hind Madurai", serif !default;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
-@import 'custom';
+@import '_custom';
+@use 'custom';
 
 // Then add additional custom code here

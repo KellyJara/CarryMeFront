@@ -34,7 +34,7 @@
               <a class="nav-link" href="/useraccount">User account</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/useraccount">User account</a>
+              <a class="nav-link" href="/carrieraccount">carrier account</a>
             </li>
             <li class="nav-item"></li>
               <a class="nav-link" href="/deliverytours">My delivery tours</a>
@@ -46,13 +46,16 @@
               <a class="nav-link" href="#">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Connexion/Deconnexion</a>
+              <a class="nav-link" href="/usersignin" data-show="disconnected">Sign in</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/usereditinfo"><i class="bi bi-person-fill"></i></a>
             </li>
-            <li class="nav-item"></li>
+            <li class="nav-item">
               <a class="nav-link" href="/carriereditinfo"><i class="bi bi-car-front-fill"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signout-btn" id="signout-Btn" data-show="connected">Sign out</a>
             </li>
           </ul>
         </div>
@@ -84,7 +87,8 @@
   </div>
   
   </footer>
-
+  
+  <script src="../pages/js/script.js"></script>
   <script type="module" src="Router/router.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
