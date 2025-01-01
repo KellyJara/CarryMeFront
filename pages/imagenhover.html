@@ -10,7 +10,7 @@
     <style>
         .image-container {
             position: relative;
-            display: inline-block;
+    
         }
         .image-container img {
             width: 100%;
@@ -26,7 +26,18 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
+        .image-container .title{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all 0.3s;
+        }
         .image-container:hover .icon {
+            opacity: 1;
+        }
+        .image-container:hover .title{
             opacity: 1;
         }
     </style>
@@ -34,7 +45,7 @@
 <body>
 
     <div class="image-container">
-        <img src="images/packtosend.jpg" alt="Imagen" class="img-fluid">
+        <img src="images/packtosend.jpg" alt="Imagen" class="img-fluid rounded w-100">
         <i class="bi bi-search icon"></i> <!-- Icono de búsqueda de Bootstrap -->
     </div>
 

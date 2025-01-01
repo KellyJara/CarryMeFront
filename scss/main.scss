@@ -100,52 +100,53 @@ header {
   color:$primary;
 }
 
+.image-container {
+  position: relative;
 
-.image-card{
-    position:relative;
-    &:hover{
-        .titre-image{
-            opacity: 1;
-        }
-        img{
-            filter: brightness(0.3);
-        }
-      }
-
-    img{
-        transition: all 0.3s;
-    }
-
-    .titre-image{
-      position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      transition: all 0.3s;
-  }
-  }
-  .image-card{
-    position:relative;
-    &:hover{
-        .titre-image,
-        .action-image-button{
-            opacity: 1;
-        }
-    }
-.action-image-button{
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 92%;
-  padding: 10px;
-  display: flex;
-  align-content: stretch;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-    }
 }
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+.image-container .icon {
+  position: absolute;
+  top: 50px;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.image-container .title{
+  position: absolute;
+  top:40%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.image-container .button{
+top: 15px;
+padding: 30px;
+display: flex;
+align-content: stretch;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-between;
+}
+.image-container:hover .icon {
+opacity: 1;
+}
+.image-container:hover .title{
+opacity: 1;
+}
+
+.image-container:hover img {
+filter: brightness(0.3);
+}
+
+
 
 
 
