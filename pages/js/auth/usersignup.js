@@ -88,27 +88,30 @@ function validateConfirmationPassword(inputPwd, inputConfirmPwd){
     }
 
 function signUpUser(){
+    alert("fetching");
 
- const myHeaders = new Headers();
+    const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-
-    const raw = JSON.stringify({
-    "lastname": "Jaramillo",
-     "name": "Vanessafetch",
-     "email": "testdepuisfront@toto.com",
-     "password": "Vozeke99*"
+    myHeaders.append("auth-token", "133c8317ba0477a3b55e3e5ddcdeb3993f01a333");
+    myHeaders.append("Cookie", "PHPSESSID=c9g66h2bgnjr5ph75e9f7nf4c5");
+    
+    let raw = JSON.stringify({
+      "email": "fifthtestpostman20@toto.com",
+      "password": "Vozeke99*",
+      "lastname": "Jaramillo",
+      "name": "Vanessa"
     });
-
-const requestOptions = {
-   method: "POST",
-   headers: myHeaders,
-   body: raw,
-   redirect: "follow"
- };
-
-fetch("localhost:8000/api/registration", requestOptions)
-  .then((response) => response.text())
-  .then((result) => console.log(result))
-  .catch((error) => console.error(error));
+    
+    let requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
+    };
+    
+    fetch("https://127.0.0.1:8000/api/registration", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.error(error));
 }
     

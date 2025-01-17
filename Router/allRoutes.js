@@ -9,7 +9,7 @@ export const allRoutes = [
     new Route("/useraccount","User's account","/pages/userauth/useraccount.html", ["client", "admin"],"pages/js/auth/useraccount.js"),
     new Route("/changepassword","Reset password", "/pages/userauth/resetpassword.html", ["client","admin"], "pages/js/auth/resetpassword.js"),
     new Route("/usereditinfo","User's edit info","/pages/userauth/usereditinfo.html", ["client","admin"]),
-    new Route("/photos","Photos","/pages/photos.html", ["client", "admin"],"pages/js/auth/photos.js"),
+    new Route("/photos","Photos","/pages/photos.html","pages/js/auth/photos.js"),
     new Route("/deliverytours","My Delivery Tour","/pages/deliverytour/deliverytour.html", ['client','admin'], "pages/js/auth/delverytour.js"),
     new Route("/imagehover","Imagen Hover","/pages/imagenhover.html"),
    ];
