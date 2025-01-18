@@ -6,6 +6,7 @@ const inputMail = document.getElementById("EmailInput");
 const inputPassword = document.getElementById("PasswordInput");
 const inputValidationPassword = document.getElementById("ValidatePasswordInput");
 const btnValidation = document.getElementById("btn-validation-inscription");
+const formInscription = document.getElementById("signUpForm");
 
 inputLastname.addEventListener("keyup", validateForm); 
 inputName.addEventListener("keyup", validateForm);
@@ -88,18 +89,18 @@ function validateConfirmationPassword(inputPwd, inputConfirmPwd){
     }
 
 function signUpUser(){
+
     alert("fetching");
+    let dataForm = new FormData(formInscription);
 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("auth-token", "133c8317ba0477a3b55e3e5ddcdeb3993f01a333");
-    myHeaders.append("Cookie", "PHPSESSID=c9g66h2bgnjr5ph75e9f7nf4c5");
     
     let raw = JSON.stringify({
-      "email": "fifthtestpostman20@toto.com",
-      "password": "Vozeke99*",
-      "lastname": "Jaramillo",
-      "name": "Vanessa"
+      "email": dataForm.get("email"),
+      "password": dataForm.get("password"),
+      "lastname": dataForm.get("lastname"),
+      "name": dataForm.get("name"),
     });
     
     let requestOptions = {
@@ -110,7 +111,7 @@ function signUpUser(){
     };
     
     fetch("https://127.0.0.1:8000/api/registration", requestOptions)
-      .then((response) => response.text())
+     .then((response) => response.json())
       .then((result) => console.log(result))
       .catch((error) => console.error(error));
 }
