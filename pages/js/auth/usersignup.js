@@ -90,26 +90,33 @@ function validateConfirmationPassword(inputPwd, inputConfirmPwd){
 
 function signUpUser(){
 
+    alert("fetching");
+
+    let dataForm = new FormData(formInscription);
+
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-
-    const raw = JSON.stringify({
-    "lastname": "Jaramillo",
-     "name": "Vanessafetch",
-     "email": "testdepuisfront@toto.com",
-     "password": "Vozeke99*"
+    
+    let raw = JSON.stringify({
+  
+        "email": dataForm.get("email"),
+        "password": dataForm.get("password"),
+        "lastname": dataForm.get("lastname"),
+        "name": dataForm.get("name"),
+      
     });
-
-const requestOptions = {
-   method: "POST",
-   headers: myHeaders,
-   body: raw,
-   redirect: "follow"
- };
-
-fetch("localhost:8000/api/registration", requestOptions)
-  .then((response) => response.text())
-  .then((result) => console.log(result))
-  .catch((error) => console.error(error));
+    
+    let requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
+    };
+    
+    fetch("https://127.0.0.1:8000/api/registration", requestOptions)
+      .then((response) => response.json())
+      .then((result) => console.log(result))
+      .catch((error) => console.error(error));
 }
+
     
